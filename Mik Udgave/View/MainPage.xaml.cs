@@ -48,9 +48,9 @@ namespace Mik_Udgave
             {
                 MyFrame.Navigate(typeof(View.Hoteller));
             }
-            else if (true)
+            else if (Gæster.IsSelected)
             {
-
+                MyFrame.Navigate(typeof(View.Gæster));
             }
 
         }
