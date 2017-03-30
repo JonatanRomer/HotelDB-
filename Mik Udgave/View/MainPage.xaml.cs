@@ -22,10 +22,12 @@ namespace Mik_Udgave
     /// </summary>
     public sealed partial class MainPage : Page
     {
+      
         public MainPage()
         {
             this.InitializeComponent();
             MyFrame.Navigate(typeof(View.Hoteller));
+            MyFrame = new Frame();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -52,6 +54,10 @@ namespace Mik_Udgave
             {
                 MyFrame.Navigate(typeof(View.Gæster));
             }
+            else if (Bookninger.IsSelected)
+            {
+                MyFrame.Navigate(typeof(View.Bookninger));
+            }
 
         }
 
@@ -62,5 +68,6 @@ namespace Mik_Udgave
                 MyFrame.GoForward();
             }
         }
+
     }
 }
