@@ -27,7 +27,6 @@ namespace Mik_Udgave
         {
             this.InitializeComponent();
             MyFrame.Navigate(typeof(View.Hoteller));
-            MyFrame = new Frame();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
