@@ -44,6 +44,14 @@ namespace Mik_Udgave
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (Hoteller.IsSelected)
+            {
+                MyFrame.Navigate(typeof(View.Hoteller));
+            }
+            else if (true)
+            {
+
+            }
 
         }
 
