@@ -8,6 +8,42 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock Grid.Column="0"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top"
+                   FontSize="24" 
+                   FontWeight="Bold">
+            Gæster::
+            </TextBlock>
+
+            <ListView Grid.Column="0"
+                  x:Name="HotelListView" 
+                  HorizontalAlignment="Left"
+                  Height="566" Width="343"
+                  VerticalAlignment="Center"
+                  Margin="10,0,0,0"
+                  BorderThickness="3"
+                  BorderBrush="Black" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock Grid.Column="1" 
+                   HorizontalAlignment="Center"
+                   Margin="0,150,0,0"                  
+                   >Vælg en Gæst:</TextBlock>
+            <TextBlock x:Name="TextBoxViserValgtHotel"
+                 Grid.Column="1" 
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Height="299" Width="584">
+            </TextBlock>
+
+        </StackPanel>
 
     </Grid>
 </Page>
