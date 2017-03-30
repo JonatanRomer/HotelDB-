@@ -8,6 +8,78 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--#region Hamburger Menu Start -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <RelativePanel>
+            <Button Name="HamburgerButton" 
+                    RelativePanel.AlignLeftWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets"
+                    FontSize="36" 
+                    Content="&#xE700;" 
+                    Click="HamburgerButton_Click" />
+            <!--Denne knap åbner og lukker vores splitview via "MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;" -->
+
+            <Button Name="BackButton"
+                    RelativePanel.RightOf="HamburgerButton" 
+                    FontFamily="Segoe MDl2 Assets" 
+                    FontSize="36"
+                    Content="&#xE0C4;" 
+                    Click="BackButton_Click"/>
+            <!--Denne Knap er tilbage den virker med "   
+            
+            if (MyFrame.CanGoBack)
+            {
+                MyFrame.GoBack();
+                NAVN.IsSelected = true;
+            }"
+            den kan altså huske hvad vi har valgt sidst.
+            -->
+
+            <TextBlock Name="TitleTextBlock"
+                       RelativePanel.RightOf="BackButton"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Margin="20,5,0,0"/>
+
+
+        </RelativePanel>
+
+        <SplitView Grid.Row="1" 
+                   Name="MySplitView"
+                   DisplayMode="CompactOverlay" 
+                   OpenPaneLength="200" 
+                   CompactPaneLength="56">
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single" 
+                         SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Name="Financial">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE7fd;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Distance</TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Food">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE92f;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Weight</TextBlock>
+                            <!--Ønsker man at skifte ikon ændre blot Text="&#xNOGETNYT;"-->
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="MyFrame"></Frame>
+                <!--her ligger MyFrame hvor alle de nye views vil kommer til at være-->
+            </SplitView.Content>
+
+        </SplitView>
+        <!--#endregion-->
+        
+        
+        
     </Grid>
 </Page>
