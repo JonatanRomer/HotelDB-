@@ -45,5 +45,13 @@ namespace Mik_Udgave
         {
 
         }
+
+        private void ForwardButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyFrame.CanGoForward)
+            {
+                MyFrame.GoForward();
+            }
+        }
     }
 }

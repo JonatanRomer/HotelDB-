@@ -29,15 +29,13 @@
                     FontSize="36"
                     Content="&#xE0C4;" 
                     Click="BackButton_Click"/>
-            <!--Denne Knap er tilbage den virker med "   
-            
-            if (MyFrame.CanGoBack)
-            {
-                MyFrame.GoBack();
-                NAVN.IsSelected = true;
-            }"
-            den kan altså huske hvad vi har valgt sidst.
-            -->
+
+            <Button Name="ForwardButton"
+                    RelativePanel.RightOf="BackButton" 
+                    FontFamily="Segoe MDl2 Assets" 
+                    FontSize="36"
+                    Content="&#xE0AB;" 
+                    Click="ForwardButton_Click"/>
 
             <TextBlock Name="TitleTextBlock"
                        RelativePanel.RightOf="BackButton"
