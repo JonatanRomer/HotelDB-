@@ -13,17 +13,16 @@
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
-        <TextBlock Grid.Column="0"
+        <StackPanel Grid.Column="0">
+            <TextBlock Grid.Column="0"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Top"
-                   Margin="0,10,0,0" 
                    FontSize="24" 
                    FontWeight="Bold">
             Hoteller:
-        </TextBlock>
+            </TextBlock>
 
-        <ListView Grid.Column="0"
+            <ListView Grid.Column="0"
                   x:Name="HotelListView" 
                   HorizontalAlignment="Left"
                   Height="566" Width="343"
@@ -31,17 +30,25 @@
                   Margin="10,0,0,0"
                   BorderThickness="3"
                   BorderBrush="Black" />
-
-        <TextBox x:Name="TextBoxViserValgtHotel"
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1">
+            <TextBlock Grid.Column="1" 
+                   HorizontalAlignment="Center"
+                   Margin="0,150,0,0"                  
+                   >Vælg et Hotel:</TextBlock>
+            <TextBlock x:Name="TextBoxViserValgtHotel"
                  Grid.Column="1" 
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  Height="299" Width="584">
-        </TextBox>
-        <TextBlock Grid.Column="1" 
-                   HorizontalAlignment="Center"
-                   Margin="0,150,0,0"                  
-                   >Vælg et Hotel:</TextBlock>
+            </TextBlock>
+
+        </StackPanel>
+
+
+
+
     </Grid>
 
 </Page>
