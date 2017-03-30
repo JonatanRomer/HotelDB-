@@ -38,10 +38,11 @@
                     Click="ForwardButton_Click"/>
 
             <TextBlock Name="TitleTextBlock"
-                       RelativePanel.RightOf="BackButton"
+                       RelativePanel.RightOf="ForwardButton"
                        FontSize="28"
                        FontWeight="Bold"
-                       Margin="20,5,0,0"/>
+                       Margin="20,5,0,0"
+                       Text=""/>
 
 
         </RelativePanel>
