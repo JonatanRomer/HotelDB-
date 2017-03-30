@@ -95,6 +95,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Bookninger.xaml.cs">
+      <DependentUpon>Bookninger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gæster.xaml.cs">
+      <DependentUpon>Gæster.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Hoteller.xaml.cs">
       <DependentUpon>Hoteller.xaml</DependentUpon>
     </Compile>
@@ -124,6 +130,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\Bookninger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gæster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Hoteller.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
