@@ -51,21 +51,28 @@
         <SplitView Grid.Row="1" 
                    Name="MySplitView"
                    DisplayMode="CompactOverlay" 
-                   OpenPaneLength="200" 
+                   OpenPaneLength="210" 
                    CompactPaneLength="56">
             <SplitView.Pane>
                 <ListBox SelectionMode="Single" 
                          SelectionChanged="ListBox_SelectionChanged">
-                    <ListBoxItem Name="Financial">
+                    <ListBoxItem Name="Hoteller">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE7fd;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Distance</TextBlock>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE128;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Hoteller</TextBlock>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="Food">
+                    <ListBoxItem Name="Gæster">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE92f;" />
-                            <TextBlock FontSize="24" Margin="20,0,0,0">Weight</TextBlock>
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE13D;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Gæster</TextBlock>
+                            <!--Ønsker man at skifte ikon ændre blot Text="&#xNOGETNYT;"-->
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Bookninger">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE121;" />
+                            <TextBlock FontSize="24" Margin="20,0,0,0">Bookninger</TextBlock>
                             <!--Ønsker man at skifte ikon ændre blot Text="&#xNOGETNYT;"-->
                         </StackPanel>
                     </ListBoxItem>
