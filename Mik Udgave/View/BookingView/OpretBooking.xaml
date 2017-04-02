@@ -9,5 +9,21 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <TextBlock HorizontalAlignment="Center"
+                   Margin="0,50,0,0"
+                   FontSize="40"> Opret Booking</TextBlock>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>Navn:</TextBlock>
+            <TextBox Name="GæstNavn"></TextBox>
+            <TextBlock>Addresse:</TextBlock>
+            <TextBox Name="GæstAddresse"></TextBox>
+            <TextBlock>Vælg Dato:</TextBlock>
+            <DatePicker Name="GæstDato"></DatePicker>
+            <TextBlock>Vælg Hotel</TextBlock>
+            <ComboBox Name="GæstHotelComboBox"></ComboBox>
+        </StackPanel>
+
+
     </Grid>
 </Page>
