@@ -19,9 +19,11 @@
             <TextBlock>Addresse:</TextBlock>
             <TextBox Name="GæstAddresse"></TextBox>
             <TextBlock>Vælg Dato:</TextBlock>
-            <DatePicker Name="GæstDato"></DatePicker>
+            <DatePicker Name="GæstDato"/>
             <TextBlock>Vælg Hotel</TextBlock>
             <ComboBox Name="GæstHotelComboBox"></ComboBox>
+            <TextBlock>Vælg Værelses type</TextBlock>
+            <ComboBox Name="GæstRoomTypeComboBox"></ComboBox>
         </StackPanel>
 
 
