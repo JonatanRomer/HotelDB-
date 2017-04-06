@@ -8,5 +8,8 @@ namespace Mik_Udgave.Persistency
 {
     class PersistencyService
     {
+
+        //her laver i vores DB kald get,post,put
+
     }
 }
