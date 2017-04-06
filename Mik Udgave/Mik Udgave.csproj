@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Guest.cs" />
     <Compile Include="View\BookingView\Bookninger.xaml.cs">
       <DependentUpon>Bookninger.xaml</DependentUpon>
     </Compile>
@@ -172,7 +173,6 @@
     <Folder Include="Common\" />
     <Folder Include="Converter\" />
     <Folder Include="Handler\" />
-    <Folder Include="Model\" />
     <Folder Include="Persistency\" />
     <Folder Include="Viewmodel\" />
   </ItemGroup>
