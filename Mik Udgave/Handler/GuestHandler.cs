@@ -8,5 +8,10 @@ namespace Mik_Udgave.Handler
 {
     class GuestHandler
     {
+
+        //herinde vil vi gerne håndtere vores guest
+        //put,post,delete
+
+
     }
 }
