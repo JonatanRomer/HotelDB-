@@ -16,7 +16,7 @@ namespace Mik_Udgave.Model
 
 
         //ctor
-        public Guest()
+        public Guest(string Navn, string Adresse)
         {
            
         }
