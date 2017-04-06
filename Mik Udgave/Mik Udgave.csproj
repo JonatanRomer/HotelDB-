@@ -101,6 +101,9 @@
     <Compile Include="View\BookingView\OpretBooking.xaml.cs">
       <DependentUpon>OpretBooking.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\BookingView\RetBooking.xaml.cs">
+      <DependentUpon>RetBooking.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\BookingView\SeBooking.xaml.cs">
       <DependentUpon>SeBooking.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\BookingView\OpretBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BookingView\RetBooking.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
