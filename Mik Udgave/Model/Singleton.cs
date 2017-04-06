@@ -8,5 +8,11 @@ namespace Mik_Udgave.Model
 {
     class Singleton
     {
+
+        //oprette singleton
+
+        //lave kald til vores persistencyservice
+        //add,dele post, get
+        //husk ctor
     }
 }
