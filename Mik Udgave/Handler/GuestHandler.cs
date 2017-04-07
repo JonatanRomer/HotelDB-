@@ -14,9 +14,10 @@ namespace Mik_Udgave.Handler
         public Viewmodel.GuestViewModel gvm {get; set;}
 
         //ctor
+        //test->
         public GuestHandler()
         {
-            
+           
         }
 
 
@@ -24,6 +25,8 @@ namespace Mik_Udgave.Handler
         public void AddGuest()
         {
             Model.Guest TempGuest = new Model.Guest(gvm.GuestName, gvm.GuestAdress);
+            Model.Singleton.Instance.AddGuest(TempGuest);
+            Model.Singleton.Instance.Hent();
         }
 
         //vi sætter vores delete til at være = den selectedguest vi har fra igen vores viewmodel - men bliver håndteret her.

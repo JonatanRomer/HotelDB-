@@ -48,10 +48,23 @@ namespace Mik_Udgave.Viewmodel
             set { guestCollection = value; }
         }
 
+
+        private ObservableCollection<Guest> visMinGuest;
+        public ObservableCollection<Guest> VisMinGuest
+        {
+            get { return visMinGuest; }
+            set
+            {
+                visMinGuest = value;
+                OnPropertyChanged(nameof(VisMinGuest));
+            }
+        }
+
         //ctor
         public GuestViewModel()
         {
             //laver instancer af vores handler samt obs af gæst
+
             GuestHandler = new Handler.GuestHandler();
             GuestColletion = new ObservableCollection<Guest>();
             GuestColletion = Singleton.Instance.GuestCollection;
@@ -60,6 +73,24 @@ namespace Mik_Udgave.Viewmodel
             PostGuestCommand = new Common.RelayCommand(GuestHandler.AddGuest, null);
             PutGuestCommand = new Common.RelayCommand(GuestHandler.PutGuest, null);
             DeleteCommand = new Common.RelayCommand(GuestHandler.DeleteGuest, null);
+
+
+            VisMinGuest = new ObservableCollection<Guest>();
+            VisMinGuest = GuestColletion;
+        }
+
+
+
+
+
+
+        //linq
+        private void VisGuest()
+        {
+            var MinGuest = from MGuest
+                           in GuestColletion
+                           select MGuest;
+            VisMinGuest = new ObservableCollection<Guest>(MinGuest);
         }
 
 

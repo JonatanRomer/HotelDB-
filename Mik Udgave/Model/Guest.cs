@@ -22,11 +22,11 @@ namespace Mik_Udgave.Model
         }
 
 
-        //overskriver vores Tostring 
-        public override string ToString()
-        {
-            return GuestNavn + " " + GuestAddresse;
-        }
+        ////overskriver vores Tostring 
+        //public override string ToString()
+        //{
+        //    return GuestNavn;
+        //}
 
 
     }
