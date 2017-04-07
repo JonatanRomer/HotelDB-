@@ -34,7 +34,7 @@ namespace Mik_Udgave.Persistency
                 try
                 {
                     //vi sætter vores response at den skal post via json og siger det skal ske via api/guests med "PostGuest" som parameter
-                    var response = Client.PostAsJsonAsync("api/guests", PostGuest).Result;
+                    var response = Client.PostAsJsonAsync("api/guests/", PostGuest).Result;
 
                     //hvis der er forbindelse og det virker går vi til vores if
                     if (response.IsSuccessStatusCode)
@@ -63,7 +63,7 @@ namespace Mik_Udgave.Persistency
                 //sætter base addresse
                 Client.BaseAddress = new Uri(serverUrl);
                 //suger vu gerne vil ha svarende tilbage fra api/guests
-                var response = Client.GetAsync("api/guests").Result;
+                var response = Client.GetAsync("api/guests/").Result;
 
                 //hvis det virker! går vi til if
                 if (response.IsSuccessStatusCode)
@@ -79,13 +79,13 @@ namespace Mik_Udgave.Persistency
         }
 
         
-        public static void DeleteGuest(Guest DeleteGuest)
+        public static void  DeleteGuest(Guest DeleteGuest)
         {
             using (var Client = new HttpClient())
             {
                 Client.BaseAddress = new Uri(serverUrl);
                 //vi siger +deleteguest.navn for at slette !! dette er normalt en okay idé men det skal være uni, hvad hvis 2 hedder Mik?
-                string urlString = "api/guests" + DeleteGuest.GuestNavn.ToString(); 
+                string urlString = "api/guests/" + DeleteGuest.Guest_No.ToString(); 
                 try
                 {
                     //her bruger vi så vores url string vi før lavede til at slette den "url" altså brugeren
@@ -116,7 +116,7 @@ namespace Mik_Udgave.Persistency
                 Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 //vi laver en ny og det bliver i api/guests + guestnavn ja guestnavn er stadig dumt og skal være unikt. gerne et tlf nr.
-                string urlString = "api/guests" + PutGuest.GuestNavn.ToString();
+                string urlString = "api/guests/" + PutGuest.Guest_No.ToString();
                 
                 try
                 {

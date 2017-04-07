@@ -10,23 +10,26 @@ namespace Mik_Udgave.Model
     {
 
         //props
-        public string GuestNavn { get; set; }
+        public string Name { get; set; }
 
-        public string GuestAddresse { get; set; }
+        public string Address { get; set; }
+
+        public int Guest_No { get; set; }
 
 
         //ctor
         public Guest(string Navn, string Adresse)
         {
-           
+            this.Name = Navn;
+            this.Address = Adresse;
         }
 
 
-        ////overskriver vores Tostring 
-        //public override string ToString()
-        //{
-        //    return GuestNavn;
-        //}
+        //overskriver vores Tostring 
+        public override string ToString()
+        {
+            return "ID:" + Guest_No + " " + Name + " " + Address;
+        }
 
 
     }

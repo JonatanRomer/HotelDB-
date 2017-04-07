@@ -65,7 +65,7 @@ namespace Mik_Udgave.Viewmodel
         {
             //laver instancer af vores handler samt obs af gæst
 
-            GuestHandler = new Handler.GuestHandler();
+            GuestHandler = new Handler.GuestHandler(this);
             GuestColletion = new ObservableCollection<Guest>();
             GuestColletion = Singleton.Instance.GuestCollection;
 
@@ -91,6 +91,8 @@ namespace Mik_Udgave.Viewmodel
                            in GuestColletion
                            select MGuest;
             VisMinGuest = new ObservableCollection<Guest>(MinGuest);
+
+
         }
 
 
@@ -108,15 +110,11 @@ namespace Mik_Udgave.Viewmodel
 
         #region Select event prop & instance field
 
-        private Model.Guest selectedGuest;
-        public Model.Guest SelectedGuest
+        private static Guest selectedGuest;
+        public Guest SelectedGuest
         {
             get { return selectedGuest; }
-            set
-            {
-                selectedGuest = value;
-                OnPropertyChanged(nameof(SelectedGuest));
-            }
+            set { selectedGuest = value; OnPropertyChanged(nameof(SelectedGuest)); }
         }
 
         #endregion

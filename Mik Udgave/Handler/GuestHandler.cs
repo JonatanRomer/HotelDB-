@@ -15,9 +15,9 @@ namespace Mik_Udgave.Handler
 
         //ctor
         //test->
-        public GuestHandler()
+        public GuestHandler(Viewmodel.GuestViewModel GVM)
         {
-           
+            this.gvm = GVM;
         }
 
 
